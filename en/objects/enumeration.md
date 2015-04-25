@@ -8,12 +8,14 @@ var fruit = {
 },
 sentence = 'I have ',
 quantity;
-for (kind in fruit){
+
+for (var kind in fruit){
     quantity = fruit[kind];
     sentence += quantity+' '+kind+
                 (quantity===1?'':'s')+
                 ', ';
 }
+
  // The following line removes the trailing coma.
 sentence = sentence.substr(0,sentence.length-2)+'.';
  // I have 2 apples, 5 oranges, 1 pear.
